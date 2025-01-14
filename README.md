@@ -1,4 +1,4 @@
-#https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7T7RUx41CXfV-wD40Nt0Ru5KnHO35rnjz_w&s
+
 """
 Modèle de départ pour la programmation Arcade.
 Il suffit de modifier les méthodes nécessaires à votre jeu.
@@ -21,7 +21,7 @@ class MyGame(arcade.Window):
     def __init__(self, width, height, title):
         super().__init__(width, height, title)
 
-        #arcade.set_background_color(arcade.color.AMAZON)
+        # arcade.set_background_color(arcade.color.AMAZON)
 
         # Si vous avez des listes de sprites, il faut les créer ici et les
         # initialiser à None.
@@ -46,35 +46,33 @@ class MyGame(arcade.Window):
         arcade.set_background_color(arcade.color.GRAY)
         self.clear()
 
-
-        #gazon
+        # gazon
         arcade.draw.draw_ellipse_filled(400, 100, 1000, 400, arcade.color.DARK_GREEN)
-        #MAISON
+        # MAISON
         arcade.draw.draw_lrbt_rectangle_filled(200, 600, 200, 500, arcade.color.BEIGE)
-        #TOIT
-        arcade.draw_triangle_filled(100,500,700,500,400,700,arcade.color.RED)
-        #CHEMINEE
+        # TOIT
+        arcade.draw_triangle_filled(100, 500, 700, 500, 400, 700, arcade.color.RED)
+        # CHEMINEE
         arcade.draw.draw_lrbt_rectangle_filled(550, 600, 500, 670, arcade.color.RED)
-        #PORTE
+        # PORTE
         arcade.draw.draw_lrbt_rectangle_filled(250, 330, 202, 350, arcade.color.BLACK)
-        #fenetre cadre
+        # fenetre cadre
         arcade.draw.draw_circle_filled(400, 570, 20, arcade.color.BROWN)
-        #toit fenetre
+        # toit fenetre
         arcade.draw.draw_arc_filled(400, 600, 60, 20, arcade.color.GREEN, 0, 180, )
-        #croix fenetre horizontal
-        points_horizontal = [(380,570),(420,570)]
+        # croix fenetre horizontal
+        points_horizontal = [(380, 570), (420, 570)]
 
         arcade.draw.draw_line_strip(points_horizontal, arcade.color.BUFF)
-        #vertical
-        points_vertical = [(400,550),(400,590)]
+        # vertical
+        points_vertical = [(400, 550), (400, 590)]
         arcade.draw.draw_line_strip(points_vertical, arcade.color.BUFF)
-        #fenetre de porte
-        points_soleil = [(270, 290),(310,290),(290, 330)]
+        # fenetre de porte
+        points_soleil = [(270, 290), (310, 290), (290, 330)]
         arcade.draw.draw_polygon_filled(points_soleil, arcade.color.WHITE)
-
-        # polygone texte;
-
-
+        # texte
+        affichage = arcade.Text("Ma maison", 300, 750, arcade.color.BARBIE_PINK, font_size=30)
+        affichage.draw()
 
         # Invoquer la méthode "draw()" de vos sprites ici.
 
