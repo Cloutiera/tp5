@@ -1,3 +1,9 @@
+"""
+Albert Cloutier
+406
+tp5 ( ma scene)
+
+"""
 
 """
 Modèle de départ pour la programmation Arcade.
